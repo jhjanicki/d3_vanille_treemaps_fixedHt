@@ -85,11 +85,6 @@ let data = [
     "total": 8
   },
   {
-    "region": "Australia and New Zealand",
-    "country": "New Zealand",
-    "total": 7
-  },
-  {
     "region": "Europe",
     "country": "Greece",
     "total": 1
@@ -227,7 +222,7 @@ let data = [
   {
     "region": "Oceania",
     "country": "New Zealand",
-    "total": 1
+    "total": 8
   },
   {
     "region": "Oceania",

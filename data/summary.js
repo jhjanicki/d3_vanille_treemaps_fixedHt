@@ -4,10 +4,6 @@ let summary = [
     "total": 184
   },
   {
-    "region": "Australia and New Zealand",
-    "total": 7
-  },
-  {
     "region": "Europe",
     "total": 30
   },
@@ -21,7 +17,7 @@ let summary = [
   },
   {
     "region": "Oceania",
-    "total": 101
+    "total": 108
   },
   {
     "region": "Other",
