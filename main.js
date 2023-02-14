@@ -15,7 +15,7 @@ summary  = summary.map(d=>{
 })
 
 // sort data
-summary = summary.sort((a,b)=>a.total-b.total)
+summary = summary.sort((a,b)=>b.total-a.total)
 data = data.sort((a,b)=>a.total-b.total)
 
 const regions = [...new Set(summary.map(d=>d.region))];
@@ -83,6 +83,7 @@ summary.forEach(shape=>{
     const svg = d3.select("#chart").append("svg")
         .attr("width", shape.width)
         .attr("height", height+marginTop);
+        
     drawTree(shape,svg,"#a8ddb5")
     
 })
