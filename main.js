@@ -69,13 +69,13 @@ const drawTree = (shape,svg,fill) =>{
         .join("text")
         .attr("class", `text${shape.order}`)
         .attr("x", d => d.x0 + 3)
-        .attr("y", d => d.y0 + 15)
-        .attr("font-size", 12.5)
+        .attr("y", d => d.y0 + 8)
+        .attr("font-size", 12)
         .attr("fill", "black")
         .attr("font-weight", 700)
-        .text(d => d.value>1?`${d.data[0]}: ${d.value}`:"");
+        .text(d => d.value>50?`${d.data[0]}: ${d.value}`:`${d.data[0]}`);
     
-    svg.append("text").attr("x",0).attr("y",marginTop-10).attr("fill","black").text(`${shape.order}: ${shape.total}`);
+    svg.append("text").attr("x",0).attr("y",marginTop-10).attr("font-size", 14).attr("fill","black").text(`${shape.order}: ${shape.total}`);
 }
 //loop over each summary object, each will either become a treemap or a rect
 summary.forEach(shape=>{

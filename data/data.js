@@ -70,42 +70,42 @@ let data = [
     "total": 43
   },
   {
-    "order": "Even-toed ungulates",
+    "order": "Ungulates even",
     "category": "CR",
     "total": 16
   },
   {
-    "order": "Even-toed ungulates",
+    "order": "Ungulates even",
     "category": "DD",
     "total": 25
   },
   {
-    "order": "Even-toed ungulates",
+    "order": "Ungulates even",
     "category": "EN",
     "total": 49
   },
   {
-    "order": "Even-toed ungulates",
+    "order": "Ungulates even",
     "category": "EX",
     "total": 8
   },
   {
-    "order": "Even-toed ungulates",
+    "order": "Ungulates even",
     "category": "EW",
     "total": 2
   },
   {
-    "order": "Even-toed ungulates",
+    "order": "Ungulates even",
     "category": "LC",
     "total": 141
   },
   {
-    "order": "Even-toed ungulates",
+    "order": "Ungulates even",
     "category": "NT",
     "total": 38
   },
   {
-    "order": "Even-toed ungulates",
+    "order": "Ungulates even",
     "category": "VU",
     "total": 57
   },
@@ -145,39 +145,9 @@ let data = [
     "total": 25
   },
   {
-    "order": "Marsupials",
-    "category": "CR",
-    "total": 15
-  },
-  {
-    "order": "Marsupials",
-    "category": "EN",
-    "total": 14
-  },
-  {
-    "order": "Marsupials",
-    "category": "EX",
-    "total": 8
-  },
-  {
-    "order": "Marsupials",
-    "category": "LC",
-    "total": 64
-  },
-  {
-    "order": "Marsupials",
-    "category": "NT",
-    "total": 23
-  },
-  {
-    "order": "Marsupials",
-    "category": "VU",
-    "total": 23
-  },
-  {
     "order": "Other",
     "category": "CR",
-    "total": 16
+    "total": 31
   },
   {
     "order": "Other",
@@ -187,27 +157,27 @@ let data = [
   {
     "order": "Other",
     "category": "EN",
-    "total": 41
+    "total": 55
   },
   {
     "order": "Other",
     "category": "EX",
-    "total": 7
+    "total": 15
   },
   {
     "order": "Other",
     "category": "LC",
-    "total": 278
+    "total": 342
   },
   {
     "order": "Other",
     "category": "NT",
-    "total": 32
+    "total": 55
   },
   {
     "order": "Other",
     "category": "VU",
-    "total": 53
+    "total": 76
   },
   {
     "order": "Primates",

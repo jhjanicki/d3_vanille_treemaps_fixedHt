@@ -8,7 +8,7 @@ let summary = [
     "total": 297
   },
   {
-    "order": "Even-toed ungulates",
+    "order": "Ungulates even",
     "total": 336
   },
   {
@@ -16,12 +16,8 @@ let summary = [
     "total": 494
   },
   {
-    "order": "Marsupials",
-    "total": 147
-  },
-  {
     "order": "Other",
-    "total": 470
+    "total": 617
   },
   {
     "order": "Primates",
