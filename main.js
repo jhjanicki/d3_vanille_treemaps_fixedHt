@@ -16,16 +16,16 @@ summary  = summary.map(d=>{
 
 // sort data
 summary = summary.sort((a,b)=>b.total-a.total)
-data = data.sort((a,b)=>a.total-b.total)
+data = data.sort((a,b) => b.total-a.total);
 
-const regions = [...new Set(summary.map(d=>d.region))];
+const orders = [...new Set(summary.map(d=>d.order))];
 const colorScale = d3.scaleOrdinal()
-    .domain(regions)
-    .range(["#7fc97f", "#beaed4","#fdc086","#ffff99","#80b1d3","#fccde5","#8dd3c7"])
+    .domain(orders)
+    .range(["#7fc97f", "#beaed4","#fdc086","#ffff99","#80b1d3","#fccde5","#8dd3c7","#fc9272"])
 
 //convert data to hierarchical format
 const convertDataHierarchy = (data)=>{
-    const groupingFn = [d => d.country]; 
+    const groupingFn = [d => d.category]; 
     const rollupData = d3.rollup(data, v => d3.sum(v, d => d.total), ...groupingFn);
     const childrenAccessorFn = ([key, value]) => value.size && Array.from(value);
     return d3.hierarchy(rollupData, childrenAccessorFn)
@@ -44,16 +44,16 @@ const setupTreemap = (w,h) =>{
 }
 
 const drawTree = (shape,svg,fill) =>{
-    const dataFiltered = data.filter(d=>d.region ===shape.region);
+    const dataFiltered = data.filter(d=>d.order ===shape.order);
     const hierarchyData = convertDataHierarchy(dataFiltered);
     const treemap = setupTreemap(shape.width, height);
     const root = treemap(hierarchyData);
     const leaves = root.leaves();
     const g = svg.append("g").attr("transform",`translate(0,${marginTop})`);
-    g.selectAll(`rect.${shape.region}`)
+    g.selectAll(`rect.${shape.order}`)
         .data(leaves)
         .join("rect")
-        .attr("class", shape.region)
+        .attr("class", shape.order)
         .attr("transform", d => "translate(" + d.x0 + "," + d.y0 + ")")
         .attr("width", d => d.x1 - d.x0)
         .attr("height", d => d.y1 - d.y0)
@@ -61,13 +61,13 @@ const drawTree = (shape,svg,fill) =>{
         .attr("ry",2)
         .attr("stroke-width", 0.5)
         .attr("stroke", "white")
-        .attr("fill", colorScale(shape.region))
+        .attr("fill", colorScale(shape.order))
         .attr("opacity", 1);
 
-    g.selectAll(`text.text${shape.region}`)
+    g.selectAll(`text.text${shape.order}`)
         .data(root.leaves())
         .join("text")
-        .attr("class", `text${shape.region}`)
+        .attr("class", `text${shape.order}`)
         .attr("x", d => d.x0 + 3)
         .attr("y", d => d.y0 + 15)
         .attr("font-size", 12.5)
@@ -75,7 +75,7 @@ const drawTree = (shape,svg,fill) =>{
         .attr("font-weight", 700)
         .text(d => d.value>1?`${d.data[0]}: ${d.value}`:"");
     
-    svg.append("text").attr("x",0).attr("y",marginTop-10).attr("fill","black").text(`${shape.region}: ${shape.total}`);
+    svg.append("text").attr("x",0).attr("y",marginTop-10).attr("fill","black").text(`${shape.order}: ${shape.total}`);
 }
 //loop over each summary object, each will either become a treemap or a rect
 summary.forEach(shape=>{

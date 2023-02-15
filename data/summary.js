@@ -1,26 +1,34 @@
 let summary = [
   {
-    "region": "Asia",
-    "total": 184
+    "order": "Bats",
+    "total": 1332
   },
   {
-    "region": "Europe",
-    "total": 30
+    "order": "Carnivores",
+    "total": 297
   },
   {
-    "region": "Latin American and the Caribbean",
-    "total": 97
+    "order": "Even-toed ungulates",
+    "total": 336
   },
   {
-    "region": "North America",
-    "total": 31
+    "order": "Hedgehogs etc",
+    "total": 494
   },
   {
-    "region": "Oceania",
-    "total": 108
+    "order": "Marsupials",
+    "total": 147
   },
   {
-    "region": "Other",
-    "total": 25
+    "order": "Other",
+    "total": 470
+  },
+  {
+    "order": "Primates",
+    "total": 522
+  },
+  {
+    "order": "Rodents",
+    "total": 2375
   }
 ]
