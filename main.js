@@ -3,7 +3,7 @@ const height = 650;
 const marginTop = 50;
 
 //scale to map original width to pixel width
-const widthScale = d3.scaleLinear().domain([0,d3.max(summary,d=>d.total)/height]).range([0,710]);
+const widthScale = d3.scaleLinear().domain([0,d3.max(summary,d=>d.total)/height]).range([0,600]);
 
 //add extra width variable to summary stats
 summary  = summary.map(d=>{
